@@ -9,3 +9,6 @@ document.querySelector('.footer input[type="email"]').addEventListener('blur', f
         alert('Please enter a valid email address.');
     }
 });
+function toggleMenu() {
+    document.querySelector('.navbar').classList.toggle('active');
+}

@@ -96,6 +96,8 @@ body, button {
     right: -250px;
     margin-top: 60px;
     overflow-y: auto; /* Allows scrolling if content overflows */
+    font-family: 'Roboto';
+    font-size: 16px;
 }
 
 .sidebar.active {

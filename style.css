@@ -7,6 +7,7 @@
 body, button {
     background-color: #F5F4DF;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -80,6 +81,48 @@ body, button {
     font-family: 'Roboto';
     border-radius: 6px;
 }
+/* Sidebar styling */
+.sidebar {
+    position:fixed; /* Fixed to the side */
+    top: 0;
+    right: 0;
+    width: 250px; /* Width of the sidebar */
+    height: 100vh; /* Full viewport height */
+    background-color: #576240; /* Sidebar background */
+    color: #fff;
+    display: none; /* Initially hidden */
+    z-index: 1000; /* Ensures it's above other content */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    right: -250px;
+    margin-top: 60px;
+    overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+.sidebar.active {
+    display: block; /* Show the sidebar when active */
+    right: 0;
+}
+
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ffff;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+.arrow-up{
+    margin-left: 80%;
+}
 /* Responsive Navbar */
 @media (max-width: 768px) {
     .nav-links, .header-icons {
@@ -109,6 +152,37 @@ body, button {
 
     .hamburger-menu {
         display: block;
+    }
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #576240;
+        width: 100%;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    .header-icons {
+        margin-top: 10px;
+        margin-right: 0;
+    }
+    .sidebar {
+        width: 200px; /* Sidebar width on small screens */
+        display: block;
+        transition: 0.5s;
     }
 
     
